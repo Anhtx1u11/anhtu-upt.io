@@ -107,13 +107,14 @@
 
   <script>
     
-  const ref = document.referrer;
-  const expected = "https://anhtx1u11.github.io/anhtu-upt.io/A-Main/index.html";
+ const url = new URL(window.location.href);
+const allowed = url.searchParams.get("auth");
 
-  if (!ref || !ref.startsWith(expected)) {
-    // Chuyển hướng về index.html nếu không truy cập từ index
-    window.location.href = expected;
-  }
+if (allowed !== "true") {
+  // Nếu không có auth=true thì quay về index
+  window.location.href = "https://anhtx1u11.github.io/anhtu-upt.io/A-Main/index.html";
+}
+
 
 
     const names = [
