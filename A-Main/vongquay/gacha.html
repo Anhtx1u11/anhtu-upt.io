@@ -106,6 +106,16 @@
   <audio id="bgMusic" src="nhac.m4a" loop preload="auto"></audio>
 
   <script>
+    
+  const ref = document.referrer;
+  const expected = "https://anhtx1u11.github.io/anhtu-upt.io/A-Main/index.html";
+
+  if (!ref || !ref.startsWith(expected)) {
+    // Chuyển hướng về index.html nếu không truy cập từ index
+    window.location.href = expected;
+  }
+
+
     const names = [
       "Lê Quốc Chung", "Nguyễn Hồng Cung", "Nguyễn Hữu Đại", "Mang Huỳnh Tấn Dũng", "Nguyễn Hữu Dương",
       "Nguyễn Huy Hoàng", "Trần Vũ Hoàng", "Đoàn Ngọc Quốc Huy", "Hồ Tấn Huy", "Lê Quốc Huy",
