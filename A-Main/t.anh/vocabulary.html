@@ -149,7 +149,16 @@
   <div class="quiz-container" id="quiz"></div>
   <button id="submit-btn">Nộp bài</button>
 
-  <script>
+
+    <script>
+  const params = new URLSearchParams(window.location.search);
+  const auth = params.get("auth");
+
+  if (auth !== "true") {
+    window.location.href = "https://anhtx1u11.github.io/anhtu-upt.io/A-Main/t.anh/opption.html";
+  }
+
+
     const questions = [
   {
     text: "There aren’t many families with the ______ Cumberbatch.",
