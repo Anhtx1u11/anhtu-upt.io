@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bài kiểm tra Kinh Tế Chính Trị (54 câu hỏi)</title>
+    
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -121,6 +122,16 @@
 <div id="result"></div>
 
 <script>
+    
+  const ref = document.referrer;
+  const expected = "https://anhtx1u11.github.io/anhtu-upt.io/A-Main/index.html";
+
+  if (!ref || !ref.startsWith(expected)) {
+    // Chuyển hướng về index.html nếu không truy cập từ index
+    window.location.href = expected;
+  }
+
+
 // ==========================
 // Dữ liệu câu hỏi
 // ==========================
@@ -777,6 +788,7 @@ submitBtn.addEventListener('click', () => {
         });
 });
 </script>
+
 
 </body>
 </html>
