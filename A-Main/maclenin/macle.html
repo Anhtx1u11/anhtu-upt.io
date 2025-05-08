@@ -4,17 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script>
-  const access = localStorage.getItem("access_maclenin");
+  // Kiểm tra xem có được truy cập từ index.html không
+  const access = localStorage.getItem("access_macle");
   if (access !== "granted") {
-    // Chuyển về index.html nếu truy cập trực tiếp
+    // Nếu không được thì quay lại index.html
     window.location.href = "../index.html";
   } else {
-    // Xóa quyền để không thể F5 lại mà vào thẳng
-    localStorage.removeItem("access_maclenin");
+    // Cho phép vào và thiết lập quyền để vào html.html
+    localStorage.setItem("access_html", "granted");
+    // Xóa quyền truy cập macle sau khi đã vào
+    localStorage.removeItem("access_macle");
   }
 </script>
 
-   
   <title>Chọn Lựa</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
