@@ -250,20 +250,7 @@
   </div>
 
   <script>
-    const ref = document.referrer;
-  const expected = "https://anhtu1.id.vn/A-Main/index.html";
-
-  if (!ref || !ref.startsWith(expected)) {
-    // Chuyển hướng về index.html nếu không truy cập từ index
-    window.location.href = expected;
-  }
-    function toggleSidebar() {
-      const sidebar = document.getElementById('sidebar');
-      const main = document.getElementById('main');
-      sidebar.classList.toggle('hidden');
-      sidebar.classList.toggle('show');
-      main.classList.toggle('full');
-    }
+    
 
     // LẤY IP NGƯỜI DÙNG
     fetch('https://api.ipify.org?format=json')
